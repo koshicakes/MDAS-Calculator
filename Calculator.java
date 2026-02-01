@@ -33,17 +33,17 @@ public class Calculator{
         //oprtr ---> operator
         char oprtr = scan.next().charAt(0);
 
-        boolean validFirstValue = false;
+        boolean validSecondValue = false;
         double secondValue = 0;
 
 		// Validating Second Value
-        while(!validSecondtValue){
+        while(!validSecondValue){
         
         System.out.print("Enter Second Value: ");
 
         if (scan.hasNextDouble()){
             secondValue = scan.nextDouble();
-            validSecondtValue = true; // Exit validtaion and solve the problem kapag valid yung operator
+            validSecondValue = true; // Exit validation and solve the problem 
         }
         else{
             System.out.println("Invalid Input!");
