@@ -9,12 +9,13 @@ public class Calculator{
         System.out.println(" ");
 
         boolean run = true;
-
+		// Calculator Run
         while (run){
         
         boolean validFirstValue = false;
         double firstValue = 0;
-
+			
+		// Validating First Value
         while (!validFirstValue){
 
         System.out.print("Enter first Value: ");
@@ -22,7 +23,6 @@ public class Calculator{
         if (scan.hasNextDouble()){
             firstValue = scan.nextDouble();
             validFirstValue = true; // Leaving the validation point and proceed to operator selection
-
         }
         else{
             System.out.println("Invalid Input!");
@@ -36,6 +36,7 @@ public class Calculator{
         boolean validFirstValue = false;
         double secondValue = 0;
 
+		// Validating Second Value
         while(!validSecondtValue){
         
         System.out.print("Enter Second Value: ");
@@ -43,31 +44,25 @@ public class Calculator{
         if (scan.hasNextDouble()){
             secondValue = scan.nextDouble();
             validSecondtValue = true; // Exit validtaion and solve the problem kapag valid yung operator
-
         }
         else{
             System.out.println("Invalid Input!");
             scan.next();
         }
-    }
-        		
+    }		
 		double total = 0;
 
         switch(oprtr){
             case '+':
                 total = firstValue + secondValue;
                 break;
-
-        //JOROSS MINUS
             case '-':
                 total = firstValue - secondValue;
                 break;
-        
             case '*':
                 total = firstValue * secondValue;
-                 break;
-
-             default:
+                break;
+            default:
                 System.out.println("Syntax Error! \n" );
                 continue;
         }
@@ -75,10 +70,8 @@ public class Calculator{
         System.out.println(firstValue + " "  + oprtr + " " + secondValue + " = " + total );
         boolean choiceValid = false;
 
-        //JOROSS VALIDATING CHOICES
-        // Validating choices 
-        
-             while(!choiceValid){
+        // Validating choices     
+       while(!choiceValid){
        System.out.print("Continue?(yes/no): ");
        String choice = scan.next();
        System.out.println(" ");
@@ -94,8 +87,6 @@ public class Calculator{
      }
     } 
    } 
-
         scan.close();
     }
-
 }
