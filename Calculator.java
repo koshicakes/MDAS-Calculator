@@ -59,8 +59,10 @@ public class Calculator{
                 break;
 
         //JOROSS MINUS
-
-
+            case '-':
+                total = firstValue - secondValue;
+                break;
+        
             case '*':
                 total = firstValue * secondValue;
                  break;
@@ -74,7 +76,24 @@ public class Calculator{
         boolean choiceValid = false;
 
         //JOROSS VALIDATING CHOICES
-
+        // Validating choices 
+        
+             while(!choiceValid){
+       System.out.print("Continue?(yes/no): ");
+       String choice = scan.next();
+       System.out.println(" ");
+       
+       if(choice.equalsIgnoreCase("no")){
+           choiceValid = true;//exit validating loop
+           run = false; //exit in the main loop and shutdown the calculator
+     } else if(choice.equalsIgnoreCase("yes")){
+           choiceValid = true; //exit validating loop
+           run = true; //continue to the main loop
+     } else{
+           System.out.println("Invalid Option!\n");
+     }
+    } 
+   } 
 
         scan.close();
     }
